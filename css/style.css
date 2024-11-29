@@ -87,7 +87,7 @@ body {
     margin: 60px;
 }
 
-.chatbotFormulario input{
+.chatbotFormulario input {
     margin: 12px;
 }
 
@@ -99,12 +99,12 @@ body {
     align-items: center;
     flex-wrap: wrap;
     margin-bottom: 190px;
-    
+
     .contactame {
         width: 50%;
         height: 300px;
         padding: 30px;
-        
+
         h4 {
             color: black;
             text-decoration: underline;
@@ -113,7 +113,7 @@ body {
             padding: 10px;
             margin-bottom: 40px;
         }
-        
+
         input {
             width: 100%;
             font-size: 18px;
@@ -121,7 +121,7 @@ body {
             border: none;
             border-bottom: 2px solid rgba(164, 164, 164, 0.59);
         }
-        
+
         textarea {
             width: 100%;
             font-size: 18px;
@@ -129,7 +129,7 @@ body {
             border: none;
             border-bottom: 2px solid rgba(164, 164, 164, 0.59);
         }
-        
+
         #enviar {
             font-size: 18px;
             background-color: rgba(164, 164, 164, 0.59);
@@ -157,7 +157,7 @@ body {
     padding: 20px;
 }
 
-.miembrosEquipo li{
+.miembrosEquipo li {
     padding: 12px;
     font-weight: bold;
 }
@@ -202,4 +202,27 @@ footer {
 
 .derechosreservados {
     font-size: 10px;
+}
+
+
+/*?---------MEDIA QUERIES------------*/
+
+@media (max-width: 768px) {
+
+}
+
+/* Para pantallas medianas (ej: tablets) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    
+}
+
+/* Para pantallas grandes (ej: desktops) */
+@media (min-width: 1025px) {
+
+    footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
 }
