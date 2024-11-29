@@ -217,7 +217,22 @@ footer {
 }
 
 /* Para pantallas grandes (ej: desktops) */
-@media (min-width: 1025px) {
+@media (min-width: 1250px) {
+    .main-tarjetas {
+        margin-bottom: 400px;
+    }
+
+    .chatbot {
+        margin-bottom: 400px;
+    }
+
+    .formulario {
+        margin-bottom: 400px;
+    }
+
+    .listadoEquipo {
+        margin-bottom: 400px;
+    }
 
     footer {
         position: fixed;
