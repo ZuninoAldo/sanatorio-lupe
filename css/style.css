@@ -91,6 +91,10 @@ body {
     margin: 12px;
 }
 
+.btn-close {
+    color: blue;
+}
+
 /*--------------CONTACTO----------*/
 
 .formulario {

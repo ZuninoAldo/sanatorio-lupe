@@ -61,10 +61,19 @@
         </h4>
         <h6> Te recomiendo que comiences con un "hola".</h6>
         <form method="post" class="chatbotFormulario">
-        <textarea name="comentarios" id="comentarios" cols="60" rows="3"
-            placeholder="    Chatea con LUPI, podes comenzar tu consulta con un hola."></textarea>
-        <input type="submit" name="enviar" id="enviar" value="Enviar Consulta" placeholder="Enviar Consulta">
-    </form>
+            <textarea name="comentarios" id="comentarios" cols="60" rows="3"
+                placeholder="    Chatea con LUPI, podes comenzar tu consulta con un hola."></textarea>
+            <input type="submit" name="enviar" id="enviar" value="Enviar Consulta" placeholder="Enviar Consulta">
+        </form>
+        <div class="modal fade" id="modalResultados" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <button type="button" class="btn-close d-flex aling-items-end p-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="modal-body" id="resultados"></div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <footer>
@@ -81,9 +90,11 @@
             </div>
         </nav>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script src="../Js/app.js"></script>
 </body>
 
 </html>
