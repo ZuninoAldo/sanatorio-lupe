@@ -14,21 +14,23 @@ class Medico {
 }
 
 const medicos = [
-    new Medico("Aristides", "Morici", "Ginecología", ["Lunes", "martes", "Miercoles"], "08:00 - 12:00"),
-    new Medico("Juliana", "Alvarau", "Ginecología", ["Jueves", "Viernes", "Sabados"], "14:00 - 18:00"),
-    new Medico("Aldo", "Zunino", "Traumatología", ["Lunes", "Miercoles", "Viernes"], "10:00 - 16:00"),
-    new Medico("Nicolas", "Della Guistina", "Cardiología", ["Lunes", "Miercoles", "Sabados"], "09:00 - 15:00"),
-    new Medico("Lucia", "D'Agresti", "Pediatría", ["Lunes", "martes", "miercoles"], "08:00 - 14:00"),
-    new Medico("Pablo", "Mancini", "Diabetología", ["Lunes", "Jueves", "Sabados"], "08:00 - 16:00"),
-    new Medico("Erica", "Rodriguez", "Clínica Médica", ["Lunes", "martes", "miercoles"], "08:00 - 16:00")
+    new Medico("Aristides", "Morici", "ginecologia", ["Lunes", "martes", "Miercoles"], "08:00 - 12:00"),
+    new Medico("Juliana", "Alvarau", "ginecologia", ["Jueves", "Viernes", "Sabados"], "14:00 - 18:00"),
+    new Medico("Aldo", "Zunino", "traumatologia", ["Lunes", "Miercoles", "Viernes"], "10:00 - 16:00"),
+    new Medico("Nicolas", "Della Guistina", "cardiologia", ["Lunes", "Miercoles", "Sabados"], "09:00 - 15:00"),
+    new Medico("Lucia", "D'Agresti", "pediatria", ["Lunes", "martes", "miercoles"], "08:00 - 14:00"),
+    new Medico("Pablo", "Mancini", "diabetologia", ["Lunes", "Jueves", "Sabados"], "08:00 - 16:00"),
+    new Medico("Erica", "Rodriguez", "clinica medica", ["Lunes", "martes", "miercoles"], "08:00 - 16:00")
 ];
+
+const especialidades = [...new Set(medicos.map(medico => medico.especialidad))];
 
 function mostrarResultados(resultados) {
     let html = "";
     resultados.forEach(medico => {
         html += `
             <h6>Doctor/a:</h6>
-            <p> ${medico.apellido} - Especialista en: ${medico.especialidad}</p>
+            <p> ${medico.apellido} - Especialista en ${medico.especialidad}</p>
             <p>Atiende los días: ${medico.diasAtencion.join(', ')}</p>
             <p>Horarios: ${medico.horario}</p>
         `;
@@ -37,31 +39,19 @@ function mostrarResultados(resultados) {
     modalResultados.show()
 }
 
-/*formulario.addEventListener('submit', (event) => {
-    event.preventDefault();
-
-    const mensaje = mensajeInput.value.toLocaleLowerCase();
-
-    if (mensaje === 'hola') {
-        mostrarResultados(medicos);
-    } else {
-        alert('No entendí tu consulta.');
-    }
-
-    mensajeInput.value = '';
-}) */
-
 formulario.addEventListener('submit', (event) => {
     event.preventDefault();
 
     const mensaje = mensajeInput.value.toLowerCase();
-    const especialidadBuscada = document.getElementById('especialidad').value.toLowerCase();
+	const especialidadBuscada = especialidades.find(especialidad =>
+		mensaje.includes(especialidad.toLowerCase())
+	);
 
     if (mensaje === 'hola') {
         mostrarResultados(medicos);
     } else if (especialidadBuscada) {
         const medicosEncontrados = medicos.filter(medico =>
-            medico.especialidad.toLowerCase() === especialidadBuscada
+            medico.especialidad.toLowerCase() === especialidadBuscada.toLowerCase()
         );
 
         if (medicosEncontrados.length > 0) {
@@ -75,5 +65,4 @@ formulario.addEventListener('submit', (event) => {
     }
 
     mensajeInput.value = '';
-    document.getElementById('especialidad').value = '';
 });
