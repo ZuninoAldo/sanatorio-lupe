@@ -57,23 +57,36 @@
     </section>
 
     <section class="chatbot">
-        <h4 class="chatbotTitulo">Nuestro ChatBot "LUPI" puede ayudarte a conseguir los turnos para nuestro Sanatorio.
+        <h4 class="chatbotTitulo">Busca tu especialista
         </h4>
-        <h6> Te recomiendo que comiences con un "hola".</h6>
+        <h6 class="chatbotSubtitulo">Podes ingresar "listado" para ver un listado de los médicos o el nombre de la especialidad que buscas.</h6>
         <form method="post" class="chatbotFormulario">
             <textarea name="comentarios" id="comentarios" cols="60" rows="3"
-                placeholder="    Chatea con LUPI, podes comenzar tu consulta con un hola."></textarea>
-            <input type="submit" name="enviar" id="enviar" value="Enviar Consulta" placeholder="Enviar Consulta">
+                placeholder="    Ingresa listado o una especialidad."></textarea>
+            <input type="submit" name="enviar" id="enviar" value="Consultar" placeholder="Consultar">
         </form>
         <div class="modal fade" id="modalResultados" tabindex="-1" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <button type="button" class="btn-close d-flex aling-items-end p-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close d-flex aling-items-end p-3" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
                     <div class="modal-body" id="resultados"></div>
                 </div>
             </div>
         </div>
+    </section>
+
+    <section>
+        <h4 class="chatbotTitulo"> Reserva tu turno</h4>
+        <h6 class="chatbotSubtitulo">Ingresá el nombre del médico del que queres reservar turno y el mail a donde querés que llegue tu turno.</h6>
+        <form method="post" class="chatbotFormulario" id="formularioReservas">
+            <input type="text" id="medicoNombres" name="medico" placeholder="medico">
+            <input type="email" id="mail" name="email" placeholder="email">
+            <input type="submit" name="reservar" id="reservar" value="Reservar" placeholder="Reservar">
+            <input type="submit" name="consultar" id="consultar" value="Consultar" placeholder="Consultar">
+            <input type="submit" name="limpiar" id="limpiar" value="Limpiar" placeholder="Limpiar">
+        </form>
     </section>
 
     <footer>
@@ -94,6 +107,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../Js/app.js"></script>
 </body>
 
