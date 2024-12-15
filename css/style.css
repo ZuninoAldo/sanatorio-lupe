@@ -4,15 +4,15 @@
     box-sizing: border-box;
 }
 
-body {
+/*body {
     background: rgb(134, 134, 134);
     background: linear-gradient(180deg, rgba(134, 134, 134, 1) 0%, rgba(255, 255, 255, 1) 82%);
-}
+}*/
 
 /*-------------INDEX-------------*/
 
 .navbar {
-    background-color: rgba(0, 0, 255, 0.434);
+    background-color: gray;
 }
 
 .navbar img {
@@ -25,7 +25,7 @@ body {
     text-align: center;
     width: 100%;
     padding: 20px;
-    background-color: rgba(255, 0, 0, 0.612);
+    background-color: pink;
 }
 
 .main-tarjetas img {
@@ -67,7 +67,7 @@ body {
     text-align: center;
     width: 100%;
     padding: 20px;
-    font-size: medium;
+    font-size: x-large;
 }
 
 .chatbotSubtitulo {
@@ -75,7 +75,7 @@ body {
     width: 100%;
     padding: 20px;
     font-size: medium;
-    color: grey;
+    color: black;
 }
 
 .chatbotFormulario {
@@ -95,6 +95,11 @@ body {
     color: blue;
 }
 
+.botonesBot {
+    padding: 10px;
+    border-radius: 12px;
+}
+
 /*--------------CONTACTO----------*/
 
 .formulario {
@@ -103,45 +108,44 @@ body {
     align-items: center;
     flex-wrap: wrap;
     margin-bottom: 190px;
+}
 
-    .contactame {
-        width: 50%;
-        height: 300px;
-        padding: 30px;
+.contactame {
+    width: 50%;
+    height: 300px;
+    padding: 30px;
+}
 
-        h4 {
-            color: black;
-            text-decoration: underline;
-            font-size: x-large;
-            text-align: center;
-            padding: 10px;
-            margin-bottom: 40px;
-        }
+.formulario h4 {
+    color: black;
+    font-size: x-large;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 40px;
+}
 
-        input {
-            width: 100%;
-            font-size: 18px;
-            background-color: transparent;
-            border: none;
-            border-bottom: 2px solid rgba(164, 164, 164, 0.59);
-        }
+.formulario input {
+    width: 100%;
+    font-size: 18px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid rgba(164, 164, 164, 0.59);
+}
 
-        textarea {
-            width: 100%;
-            font-size: 18px;
-            background-color: transparent;
-            border: none;
-            border-bottom: 2px solid rgba(164, 164, 164, 0.59);
-        }
+.formulario textarea {
+    width: 100%;
+    font-size: 18px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid rgba(164, 164, 164, 0.59);
+}
 
-        #enviar {
-            font-size: 18px;
-            background-color: rgba(164, 164, 164, 0.59);
-            border: 1px solid rgba(164, 164, 164, 0.59);
-            margin-top: 4px;
-            margin-bottom: 60px;
-        }
-    }
+#contactarnos {
+    font-size: 18px;
+    background-color: rgba(164, 164, 164, 0.59);
+    border: 1px solid rgba(164, 164, 164, 0.59);
+    margin-top: 4px;
+    margin-bottom: 75px;
 }
 
 .contactame input::placeholder {
@@ -150,6 +154,47 @@ body {
 
 .contactame textarea::placeholder {
     color: black;
+}
+
+/*--------CAPITAL HUMANO------*/
+
+.mainText {
+    text-align: justify;
+    margin: 30px;
+}
+
+.subtituloBusquedas {
+    text-align: center;
+}
+
+.cardBusqueda {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.cardUno {
+    width: 400px;
+    height: auto;
+    align-items: center;
+    margin: 15px;
+    padding: 10px;
+    border: 1px solid gray;
+}
+
+.cardUno h6 {
+    text-align: center;
+    font-size: x-large;
+}
+
+.justificar {
+    text-align: justify;
+}
+
+.textFinal {
+    text-align: justify;
+    margin: 50px 20px 75px 20px;
 }
 
 /*--------EQUIPO--------------*/
@@ -186,7 +231,7 @@ body {
 }
 
 .main-institucion p {
-    text-align: center;
+    text-align: justify;
 }
 
 .listado {
@@ -212,14 +257,10 @@ footer {
 
 /*?---------MEDIA QUERIES------------*/
 
-@media (max-width: 768px) {
-
-}
+@media (max-width: 768px) {}
 
 /* Para pantallas medianas (ej: tablets) */
-@media (min-width: 769px) and (max-width: 1024px) {
-    
-}
+@media (min-width: 769px) and (max-width: 1024px) {}
 
 /* Para pantallas grandes (ej: desktops) */
 @media (min-width: 1250px) {
