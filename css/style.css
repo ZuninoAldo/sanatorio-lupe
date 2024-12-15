@@ -265,7 +265,7 @@ footer {
 /* Para pantallas grandes (ej: desktops) */
 @media (min-width: 1250px) {
     .main-tarjetas {
-        margin-bottom: 400px;
+        margin-bottom: 180px;
     }
 
     .chatbot {
@@ -273,11 +273,11 @@ footer {
     }
 
     .formulario {
-        margin-bottom: 520px;
+        margin-bottom: 300px;
     }
 
     .listadoEquipo {
-        margin-bottom: 300px;
+        margin-bottom: 200px;
     }
 
     footer {
