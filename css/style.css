@@ -47,6 +47,7 @@
     align-items: center;
     justify-content: space-around;
     margin: 20px;
+    flex-wrap: wrap;
 }
 
 .tarjetas {
@@ -172,6 +173,7 @@
     align-items: center;
     justify-content: space-around;
     margin: 20px;
+    flex-wrap: wrap;
 }
 
 .cardUno {
@@ -257,13 +259,7 @@ footer {
 
 /*?---------MEDIA QUERIES------------*/
 
-@media (max-width: 768px) {}
-
-/* Para pantallas medianas (ej: tablets) */
-@media (min-width: 769px) and (max-width: 1024px) {}
-
-/* Para pantallas grandes (ej: desktops) */
-@media (min-width: 1250px) {
+@media screen and (min-width: 1250px) {
     .main-tarjetas {
         margin-bottom: 180px;
     }
@@ -273,7 +269,7 @@ footer {
     }
 
     .formulario {
-        margin-bottom: 300px;
+        margin-bottom: 200px;
     }
 
     .listadoEquipo {
@@ -285,5 +281,128 @@ footer {
         bottom: 0;
         left: 0;
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .chatBot2 {
+        margin-bottom: 50px;
+    }
+
+    .miembrosEquipo {
+        margin-bottom: 80px;
+    }
+
+    .listado{
+        margin-bottom: 95px;
+    }
+}
+
+@media screen and (max-width: 788px) {
+    .chatBot2 {
+        margin-bottom: 100px;
+    }
+
+    #contactarnos {
+        margin-bottom: 100px;
+    }
+}
+
+@media screen and (max-width: 785px) {
+    .chatBot2 {
+        margin-bottom: 65px;
+    }
+
+}
+
+@media screen and (max-width: 750px) {
+    .main-tarjetas {
+        flex-direction: column;
+    }
+
+    .chatBot2 {
+        margin-bottom: 100px;
+    }
+
+    .cardBusqueda {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 710px) {
+    .listado{
+        margin-bottom: 95px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .chatbotFormulario textarea{
+        width: 200px;
+    }
+
+    .chatBot2 {
+        margin-bottom: 100px;
+    }
+
+    #contactarnos {
+        margin-bottom: 100px;
+    }
+}
+
+@media screen and (max-width: 503px) {
+    #contactarnos {
+        margin-bottom: 100px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #contactarnos {
+        margin-bottom: 120px;
+    }
+
+    .miembrosEquipo {
+        margin-bottom: 80px;
+    }
+
+    .listado{
+        margin-bottom: 120px;
+    }
+}
+
+@media screen and (max-width: 445px) {
+    .cardUno {
+        width: 50%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .cardUno h6 {
+        font-size: medium;
+    }
+
+    .cardUno {
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 354px) {
+    .miembrosEquipo {
+        margin-bottom: 90px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .chatBot2 {
+        margin-bottom: 120px;
+    }
+
+    .miembrosEquipo {
+        margin-bottom: 95px;
+    }
+
+    .listado{
+        margin-bottom: 120px;
     }
 }
