@@ -306,6 +306,10 @@ footer {
     #contactarnos {
         margin-bottom: 100px;
     }
+
+    .textFinal {
+        margin-bottom: 120px;
+    }
 }
 
 @media screen and (max-width: 785px) {
