@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
             const Medicos = await response.json();
             renderMedicos(Medicos);
-            return Medicos;
         } catch (error) {
             console.error('There has been a problem with your fetch operation:', error);
             return [];
