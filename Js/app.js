@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', async () => {
     const Medico = async () => {
         try {
-            const response = await fetch('../medicos.json');
+            const response = await fetch('../JSON/medicos.json');
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 
-    Medico();
+    const medicos = await Medico();
 
     const formulario = document.querySelector('.chatbotFormulario')
     const mensajeInput = document.getElementById('comentarios');
