@@ -1,0 +1,51 @@
+[
+    {
+        "firstName": "Aristides",
+        "lastName": "Morici",
+        "specialty": "ginecologia",
+        "availableDays": ["Lunes", "martes", "Miercoles"],
+        "workingHours": "08:00 - 12:00"
+    },
+    {
+        "firstName": "Juliana",
+        "lastName": "Alvarau",
+        "specialty": "ginecologia",
+        "availableDays": ["Jueves", "Viernes", "Sabados"],
+        "workingHours": "14:00 - 18:00"
+    },
+    {
+        "firstName": "Aldo",
+        "lastName": "Zunino",
+        "specialty": "traumatologia",
+        "availableDays": ["Lunes", "Miercoles", "Viernes"],
+        "workingHours": "10:00 - 16:00"
+    },
+    {
+        "firstName": "Nicolas",
+        "lastName": "Della Guistina",
+        "specialty": "cardiologia",
+        "availableDays": ["Lunes", "Miercoles", "Sabados"],
+        "workingHours": "09:00 - 15:00"
+    },
+    {
+        "firstName": "Lucia",
+        "lastName": "D'Agresti",
+        "specialty": "pediatria",
+        "availableDays": ["Lunes", "martes", "miercoles"],
+        "workingHours": "08:00 - 14:00"
+    },
+    {
+        "firstName": "Pablo",
+        "lastName": "Mancini",
+        "specialty": "diabetologia",
+        "availableDays": ["Lunes", "Jueves", "Sabados"],
+        "workingHours": "08:00 - 16:00"
+    },
+    {
+        "firstName": "Erica",
+        "lastName": "Rodriguez",
+        "specialty": "clinica medica",
+        "availableDays": ["Lunes", "martes", "miercoles"],
+        "workingHours": "08:00 - 16:00"
+    }
+]
