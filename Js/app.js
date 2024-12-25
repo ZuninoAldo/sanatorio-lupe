@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', async () => {
     const Medico = async () => {
         try {
-            const response = await fetch('../JSON/medicos.json');
+            const response = await fetch('../medicos.json');
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
