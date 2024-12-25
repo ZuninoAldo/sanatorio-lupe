@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 
-    const medicos = await Medico();
+    Medico();
 
     const formulario = document.querySelector('.chatbotFormulario')
     const mensajeInput = document.getElementById('comentarios');
