@@ -145,10 +145,14 @@ document.addEventListener('DOMContentLoaded', async () => {
     consultar.addEventListener('click', event => {
         event.preventDefault();
 
-        console.log(turnosReservados);
+        const turnosReservadosMostrar = JSON.parse(localStorage.getItem("turnosReservados")) || [];
+        let turnosTexto = turnosReservadosMostrar.map(turno => {
+            return `Médico: ${turno.medico.nombre} ${turno.medico.apellido}, Especialidad: ${turno.medico.especialidad}, Días de atención: ${turno.medico.diasAtencion.join(', ')}, Horarios: ${turno.medico.horario}, Se enviarán los datos al Email: ${turno.email}`;
+        }).join('\n');
+        
         Swal.fire({
-            title: "Turno Guardado",
-            text: "Se muestran sus turnos en consola",
+            title: "Turnos Guardados",
+            text: turnosTexto || "No hay turnos reservados.",
             icon: "info"
         });
     })
