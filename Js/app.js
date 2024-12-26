@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         const turnosReservadosMostrar = JSON.parse(localStorage.getItem("turnosReservados")) || [];
         let turnosTexto = turnosReservadosMostrar.map(turno => {
-            return `Médico: ${turno.medico.nombre} ${turno.medico.apellido}, Especialidad: ${turno.medico.especialidad}, Días de atención: ${turno.medico.diasAtencion.join(', ')}, Horarios: ${turno.medico.horario}, Se enviarán los datos al Email: ${turno.email}`;
+            return `Médico: ${turno.medico.nombre} ${turno.medico.apellido}, Especialidad: ${turno.medico.especialidad}, Días de atención: ${turno.medico.diasAtencion.join(', ')}, Horarios: ${turno.medico.horario}, Se enviarán los datos del turno al Email: ${turno.email}`;
         }).join('\n');
         
         Swal.fire({
