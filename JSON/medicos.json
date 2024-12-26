@@ -2,49 +2,49 @@
     {
         "nombre": "Aristides",
         "apellido": "Morici",
-        "esecialidad": "ginecologia",
+        "especialidad": "ginecologia",
         "diasAtencion": ["Lunes", "martes", "Miercoles"],
         "horario": "08:00 - 12:00"
     },
     {
         "nombre": "Juliana",
         "apellido": "Alvarau",
-        "esecialidad": "ginecologia",
+        "especialidad": "ginecologia",
         "diasAtencion": ["Jueves", "Viernes", "Sabados"],
         "horario": "14:00 - 18:00"
     },
     {
         "nombre": "Aldo",
         "apellido": "Zunino",
-        "esecialidad": "traumatologia",
+        "especialidad": "traumatologia",
         "diasAtencion": ["Lunes", "Miercoles", "Viernes"],
         "horario": "10:00 - 16:00"
     },
     {
         "nombre": "Nicolas",
         "apellido": "Della Guistina",
-        "esecialidad": "cardiologia",
+        "especialidad": "cardiologia",
         "diasAtencion": ["Lunes", "Miercoles", "Sabados"],
         "horario": "09:00 - 15:00"
     },
     {
         "nombre": "Lucia",
         "apellido": "D'Agresti",
-        "esecialidad": "pediatria",
+        "especialidad": "pediatria",
         "diasAtencion": ["Lunes", "martes", "miercoles"],
         "horario": "08:00 - 14:00"
     },
     {
         "nombre": "Pablo",
         "apellido": "Mancini",
-        "esecialidad": "diabetologia",
+        "especialidad": "diabetologia",
         "diasAtencion": ["Lunes", "Jueves", "Sabados"],
         "horario": "08:00 - 16:00"
     },
     {
         "nombre": "Erica",
         "apellido": "Rodriguez",
-        "esecialidad": "clinica medica",
+        "especialidad": "clinica medica",
         "diasAtencion": ["Lunes", "martes", "miercoles"],
         "horario": "08:00 - 16:00"
     }
