@@ -3,12 +3,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         try {
             const response = await fetch('../JSON/medicos.json');
             if (!response.ok) {
-                throw new Error('Network response was not ok');
+                throw new Error('Hubo un error al obtener los datos de los médicos');
             }
             const Medicos = await response.json();
             renderMedicos(Medicos);
         } catch (error) {
-            console.error('There has been a problem with your fetch operation:', error);
+            console.error('Hubo un error al realizar el llamado al fetch', error);
             return [];
         }
     }
