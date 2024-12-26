@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 throw new Error('Hubo un error al obtener los datos de los médicos');
             }
             const Medicos = await response.json();
-            renderMedicos(Medicos);
+            return Medicos;
         } catch (error) {
             console.error('Hubo un error al realizar el llamado al fetch', error);
             return [];
