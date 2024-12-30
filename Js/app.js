@@ -3,12 +3,21 @@ document.addEventListener('DOMContentLoaded', async () => {
         try {
             const response = await fetch('../JSON/medicos.json');
             if (!response.ok) {
-                throw new Error('Hubo un error al obtener los datos de los médicos');
+                throw Swal.fire({
+                    icon: "error",
+                    title: "¡Algo en nuestro sistema no salio bien!",
+                    text: "Algo inesperado ocurrió. Sin embargo, tus datos fueron guardados correctamente. Volvé a intentar más tarde.",
+                    footer: '<a href="https://www.google.com/search?q=explicacion+de+errores+mas+comunes+en+conexion+con+servidores&sca_esv=697ac3e2085e9089&sxsrf=ADLYWIL5prudZQwskcBjQNWULFC-5cTSWA%3A1735598270060&ei=viBzZ7OuA6XE5OUP4M_aqA4&oq=explicacion+de+errores+mas+comunes+en+conexion+con+ser&gs_lp=Egxnd3Mtd2l6LXNlcnAiNmV4cGxpY2FjaW9uIGRlIGVycm9yZXMgbWFzIGNvbXVuZXMgZW4gY29uZXhpb24gY29uIHNlcioCCAAyBRAhGKABMgUQIRigAUiFRFDyB1iGOHABeAGQAQCYAaoCoAGiHaoBBjAuMjQuMrgBA8gBAPgBAZgCG6ACgB7CAgoQABiwAxjWBBhHwgIHECMYJxiuAsICBBAjGCfCAgQQIRgVmAMAiAYBkAYIkgcIMS4yNC4xLjGgB_Nh&sclient=gws-wiz-serp">¿Porqué veo este error?</a>'
+                });;
             }
             const Medicos = await response.json();
             return Medicos;
         } catch (error) {
-            console.error('Hubo un error al realizar el llamado al fetch', error);
+            Swal.fire({
+                icon: "error",
+                title: "¡Ups! Algo salió mal",
+                text: "No se pudo obtener la información de los médicos. Por favor, volvé a intentar más tarde.",
+            });
             return [];
         }
     }
@@ -149,7 +158,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         let turnosTexto = turnosReservadosMostrar.map(turno => {
             return `Médico: ${turno.medico.nombre} ${turno.medico.apellido}, Especialidad: ${turno.medico.especialidad}, Días de atención: ${turno.medico.diasAtencion.join(', ')}, Horarios: ${turno.medico.horario}, Se enviarán los datos del turno al Email: ${turno.email}`;
         }).join('\n');
-        
+
         Swal.fire({
             title: "Turnos Guardados",
             text: turnosTexto || "No hay turnos reservados.",
